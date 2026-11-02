@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayoub Ismail Studio — AI & Luxury Streetwear Suite</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: '#D4AF37',
+                        darkBg: '#0F0F11',
+                        cardBg: '#18181C'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #0F0F11; color: #E5E5E5; font-family: system-ui, -apple-system, sans-serif; }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between">
+
+    <!-- Header Navigation -->
+    <header class="border-b border-gray-800 px-6 py-4 flex justify-between items-center sticky top-0 bg-darkBg/90 backdrop-blur z-50">
+        <div class="flex items-center space-x-3">
+            <span class="text-2xl font-black tracking-widest text-white">AYOUB ISMAIL</span>
+            <span class="text-xs bg-gold/20 text-gold px-2 py-0.5 rounded font-mono border border-gold/30">STUDIO 2030</span>
+        </div>
+        <nav class="hidden md:flex space-x-8 text-sm font-medium">
+            <a href="#collections" class="hover:text-gold transition">COLLECTIONS</a>
+            <a href="#analytics" class="hover:text-gold transition">AI ANALYTICS</a>
+            <a href="#about" class="hover:text-gold transition">ABOUT</a>
+        </nav>
+        <div class="flex items-center space-x-4">
+            <button id="cartBtn" class="relative bg-gray-800 hover:bg-gray-700 px-4 py-2 rounded-full text-xs font-semibold tracking-wider transition border border-gray-700">
+                CART (<span id="cartCount">0</span>)
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="px-6 py-16 max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+        <div>
+            <span class="text-xs font-mono text-gold tracking-widest uppercase">High-End Fashion & Deep Tech Integration</span>
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-white mt-3 leading-tight">
+                AI-Driven Fashion & Conversion Analytics
+            </h1>
+            <p class="mt-4 text-gray-400 text-base leading-relaxed">
+                Full-stack luxury e-commerce suite featuring automated conversion funnel tracking, real-time demand scoring, and personalized digital retail experiences.
+            </p>
+            <div class="mt-8 flex space-x-4">
+                <a href="#collections" class="bg-gold text-black font-bold px-6 py-3 rounded-md text-sm hover:bg-yellow-500 transition">EXPLORE COLLECTION</a>
+                <button onclick="triggerAnalyticsDemo()" class="border border-gray-700 bg-cardBg hover:border-gold px-6 py-3 rounded-md text-sm font-semibold text-gray-300 transition">RUN ANALYTICS DEMO</button>
+            </div>
+        </div>
+        <div class="relative bg-gradient-to-tr from-gold/10 to-purple-900/20 p-8 rounded-2xl border border-gray-800 shadow-2xl">
+            <div class="flex justify-between items-center mb-6">
+                <span class="text-xs font-mono text-gray-400">LIVE TELEMETRY HUB</span>
+                <span class="inline-block w-2.5 h-2.5 bg-green-500 rounded-full animate-pulse"></span>
+            </div>
+            <div class="space-y-4 font-mono text-xs">
+                <div class="bg-black/60 p-3 rounded border border-gray-800">
+                    <span class="text-gray-500">[User Session Tracked]</span> <span class="text-gold">ID: #USR-2030-88X</span>
+                </div>
+                <div class="bg-black/60 p-3 rounded border border-gray-800">
+                    <span class="text-gray-500">[Funnel Conversion API]</span> <span class="text-green-400">Active - 99.4% Precision</span>
+                </div>
+                <div class="bg-black/60 p-3 rounded border border-gray-800">
+                    <span class="text-gray-500">[Predicted Trend Match]</span> <span class="text-blue-400">Minimalist Cyberwear (+42%)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Showcase -->
+    <section id="collections" class="px-6 py-12 max-w-6xl mx-auto w-full">
+        <h2 class="text-2xl font-bold text-white mb-8 border-l-4 border-gold pl-3">Exclusive Capsule Collection</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8" id="productGrid">
+            <!-- Dynamic JS Injection -->
+        </div>
+    </section>
+
+    <!-- Analytics Dashboard Mock -->
+    <section id="analytics" class="px-6 py-12 max-w-6xl mx-auto w-full border-t border-gray-800 mt-12">
+        <h2 class="text-2xl font-bold text-white mb-6 border-l-4 border-gold pl-3">Conversion Analytics & SQL Data Logs</h2>
+        <div class="bg-cardBg p-6 rounded-xl border border-gray-800">
+            <div class="flex justify-between items-center mb-4">
+                <span class="text-sm font-semibold text-gray-300">Client-Side Funnel Telemetry Log</span>
+                <button onclick="clearLogs()" class="text-xs text-gray-500 hover:text-red-400">Clear Logs</button>
+            </div>
+            <div id="consoleLog" class="bg-black p-4 rounded-lg font-mono text-xs h-40 overflow-y-auto space-y-2 text-gray-400 border border-gray-900">
+                <p class="text-gold">[System Initialized] Luxury E-Commerce Suite loaded successfully.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-900 px-6 py-8 text-center text-xs text-gray-600">
+        <p>© 2030 Ayoub Ismail Studio. Engineered with HTML5, CSS3, JavaScript & PHP Backend for C2N Module.</p>
+        <p class="mt-2 font-mono">ISI — Institut Supérieur d’Informatique, Université de Tunis El Manar</p>
+    </footer>
+
+    <!-- JavaScript Application Logic & Telemetry -->
+    <script>
+        const products = [
+            { id: 1, name: "Oversized AI-Tailored Hoodie", price: 290, color: "Black & Gold", score: "98.4" },
+            { id: 2, name: "Minimalist Cyberpunk Cargo", price: 340, color: "Charcoal Grey", score: "94.1" },
+            { id: 3, name: "Tactical Modular Blazer", price: 480, color: "Deep Obsidian", score: "99.0" }
+        ];
+
+        let cartCount = 0;
+
+        function renderProducts() {
+            const grid = document.getElementById('productGrid');
+            grid.innerHTML = products.map(p => `
+                <div class="bg-cardBg p-6 rounded-xl border border-gray-800 hover:border-gold/50 transition flex flex-col justify-between">
+                    <div>
+                        <div class="h-48 bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg flex items-center justify-center text-gray-600 font-mono text-sm mb-4">
+                            [${p.name}]
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <h3 class="font-bold text-lg text-white">${p.name}</h3>
+                            <span class="text-gold font-mono font-semibold">${p.price} €</span>
+                        </div>
+                        <p class="text-xs text-gray-400 mt-1">Palette: ${p.color}</p>
+                        <div class="mt-3 inline-block bg-gold/10 text-gold text-xs px-2 py-1 rounded font-mono">
+                            AI Demand Score: ${p.score}/100
+                        </div>
+                    </div>
+                    <button onclick="addToCart('${p.name}', ${p.price})" class="mt-6 w-full bg-gray-800 hover:bg-gold hover:text-black font-semibold text-sm py-2.5 rounded transition border border-gray-700">
+                        ADD TO CART
+                    </button>
+                </div>
+            `).join('');
+        }
+
+        function addToCart(name, price) {
+            cartCount++;
+            document.getElementById('cartCount').innerText = cartCount;
+            logTelemetry(`[CART ADD] Product: "${name}" (${price} €) | Conversion Event Logged.`);
+        }
+
+        function triggerAnalyticsDemo() {
+            logTelemetry(`[AI ENGINE] Processing user interaction heatmaps...`);
+            setTimeout(() => logTelemetry(`[SQL PIPELINE] Executing: INSERT INTO conversion_analytics (session_id, conversion_score) VALUES ('#USR-88X', 0.94);`), 600);
+        }
+
+        function logTelemetry(message) {
+            const consoleBox = document.getElementById('consoleLog');
+            const p = document.createElement('p');
+            p.className = 'text-green-400';
+            p.innerText = `> ${new Date().toLocaleTimeString()} ${message}`;
+            consoleBox.appendChild(p);
+            consoleBox.scrollTop = consoleBox.scrollHeight;
+        }
+
+        function clearLogs() {
+            document.getElementById('consoleLog').innerHTML = '<p class="text-gray-600">[Logs Cleared]</p>';
+        }
+
+        // Initialize App
+        renderProducts();
+    </script>
+</body>
+</html>
